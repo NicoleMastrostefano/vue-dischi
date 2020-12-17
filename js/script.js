@@ -2,29 +2,42 @@ var app = new Vue (
   {
     el:"#root",
     data: {
-      albums:[]
-
+      albums:[],
+      genres:[],
+      selectedGenre:''
     },
-
-    // methods: {
-    //   sortedArray(){
-    //   return this.albums.sort((a, b) => a.year - b.year );
-    //   }
-    // },
 
     mounted:function(){
       axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((result)=>{
           this.albums = result.data.response;
-          this.albums.sort((a, b) =>
-          a.year - b.year )
-        })
+          // Bonus 1
+          this.albums.sort((a, b) => a.year - b.year )
+          // Bonus 2
+          this.albums.forEach(
+          (album) => {
+            if(!this.genres.includes(album.genre)) {
+              this.genres.push(album.genre);
+            }
+          });
+        }
+      )
     },
 
-})
-    // "poster": "https://",
-    // "title": "Steve Gadd Band",
-    // "author": "Steve Gadd Band",
-    // "genre": "Jazz",
-    // "year": "2018"
+    // methods: {
+    //   filterGenres: function() {
+    //     this.albums.forEach(
+    //     (element) => {
+    //       if(!this.genres.includes(element.genre)) {
+    //         this.genres.push(element.genre);
+    //       }
+    //     });
+    //   },
+    // }
+    //   sortedArray(){
+    //   return this.albums.sort((a, b) => a.year - b.year );
+    //   }
+    // },
+  }
+)

@@ -10,7 +10,6 @@ body {
   color:white;
 }
 
-
 header {
   height: 50px;
   background-color: black;
@@ -22,6 +21,7 @@ header {
 header img {
   height: 100%;
 }
+
 #select {
   text-align: center;
 }
@@ -53,5 +53,6 @@ header img {
 }
 
 #title-author span{
-font-weight: lighter;
+  font-weight: lighter;
+  font-style: oblique;
 }
