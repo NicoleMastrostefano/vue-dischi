@@ -7,14 +7,28 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #2c2c2c;
-  display: flex;
   color:white;
 }
 
-#root {
-  height: 80%;
+
+header {
+  height: 50px;
+  background-color: black;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+header img {
+  height: 100%;
+}
+#select {
+  text-align: center;
+}
+
+#albums-container {
   width: 80%;
-  margin: auto;
+  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -33,8 +47,9 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
-img {
-  max-height: 140px;
+
+.album img {
+  max-height:60%;
 }
 
 #title-author span{

@@ -7,6 +7,20 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Vue-dischi</title>
       <div id="root">
+        <header>
+          <img src="img/spotify-logo.png" />
+        </header>
+          <div id="select">
+            <select name="">
+              <option value="All">all</option>
+              <option value="Pop">pop</option>
+              <option value="Rock">rock</option>
+              <option value="Metal">metal</option>
+              <option value="Jazz">jazz</option>
+            </select>
+          </div>
+        <main id="albums-container">
+
         <div class="album"v-for="album in albums">
           <img :src="album.poster" :alt="album.title">
           <div id="title-author">
@@ -15,6 +29,7 @@
           </div>
           <small>{{album.year}}</small>
         </div>
+        </main>
       </div>
       <script src="js/script.js" charset="utf-8"></script>
   </head>
