@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Vue-dischi</title>
+      <div id="root">
+        <div class="album"v-for="album in albums">
+          <img :src="album.poster" :alt="album.title">
+          <div id="title-author">
+            <h4>{{ album.title }}</h4>
+            <span>{{ album.author}}</span>
+          </div>
+          <small>{{album.year}}</small>
+        </div>
+      </div>
+      <script src="js/script.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+  </body>
+</html>
